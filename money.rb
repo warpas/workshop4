@@ -5,13 +5,11 @@ class Money
   end
 
   def to_s
-    "#{@count.round(2)} #{@currency}"
+    "%.2f" % @count + " #{@currency}"
   end
 
   def inspect
     string = "#<#{self.class.name} "
-    string << @count.round(2).to_s << " " << @currency << ">"
+    string << "%.2f" % @count << " " << @currency << ">"
   end
 end
-
-# load './basics.rb'
